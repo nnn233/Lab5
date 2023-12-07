@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("file:///" + path));
             startActivity(intent);
         } catch (Exception e) {
-            startActivity(new Intent(DownloadManager.ACTION_VIEW_DOWNLOADS));
+            Toast.makeText(this, "Невозможно открыть файл", Toast.LENGTH_SHORT).show();
         }
     }
 
